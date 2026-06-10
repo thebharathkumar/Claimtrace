@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "prospectus",
+    "name": "SPCX Prospectus (excerpt)",
+    "kind": "prospectus",
+    "file": "prospectus_spcx.txt"
+  },
+  {
+    "source_id": "financial-wire",
+    "name": "Financial Wire",
+    "kind": "news",
+    "file": "news_financial_wire.txt"
+  },
+  {
+    "source_id": "market-daily",
+    "name": "Market Daily",
+    "kind": "news",
+    "file": "news_market_daily.txt"
+  },
+  {
+    "source_id": "orbit-business",
+    "name": "Orbit Business Review",
+    "kind": "news",
+    "file": "news_orbit_business.txt"
+  },
+  {
+    "source_id": "global-markets",
+    "name": "Global Markets Post",
+    "kind": "news",
+    "file": "news_global_markets.txt"
+  },
+  {
+    "source_id": "tech-ledger",
+    "name": "Tech Ledger",
+    "kind": "news",
+    "file": "news_tech_ledger.txt"
+  }
+]

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>claimtrace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/static/viewer.css" />
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>claimtrace</h1>
+    <p class="tagline">trace it. ground it. prove it.</p>
+  </div>
+  <div class="run-meta" id="run-meta">
+    <button id="btn-run" class="action">run pipeline</button>
+  </div>
+</header>
+
+<main>
+  <section id="sec-brief">
+    <h2><span class="num">01</span> Sourced brief</h2>
+    <p class="section-note">Every factual sentence carries a clickable source reference. Click a ref to see exactly where the number came from.</p>
+    <div id="brief" class="brief">loading…</div>
+  </section>
+
+  <section id="sec-contradictions">
+    <h2><span class="num">02</span> Contradictions</h2>
+    <p class="section-note">Where the sources disagree with each other. Conflicting values side by side, each with its evidence.</p>
+    <div id="contradictions"></div>
+  </section>
+
+  <section id="sec-claims">
+    <h2><span class="num">03</span> Claims</h2>
+    <p class="section-note">The fixed claim schema, cross-checked across every source. Click a row for the full drill-down.</p>
+    <table id="claims-table">
+      <thead>
+        <tr><th>claim</th><th>value</th><th>status</th><th>sources</th><th>confidence</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="sec-trace">
+    <h2><span class="num">04</span> Trace timeline</h2>
+    <p class="section-note">One span per agent node, exported via OTLP to <a id="triage-link" href="#" target="_blank" rel="noopener">agent-triage</a>. Latency, token usage, and tool outcomes per node.</p>
+    <div id="timeline"></div>
+  </section>
+
+  <section id="sec-audit">
+    <h2><span class="num">05</span> Audit chain</h2>
+    <p class="section-note">Every claim, check, and verification is an HMAC-chained log entry. Recompute the chain to prove nothing was altered after the fact.</p>
+    <div class="audit-actions">
+      <button id="btn-verify" class="action">verify audit chain</button>
+      <button id="btn-tamper" class="ghost">simulate tamper</button>
+      <button id="btn-restore" class="ghost">restore</button>
+      <span id="chain-status"></span>
+    </div>
+    <div id="audit-log"></div>
+  </section>
+</main>
+
+<aside id="drilldown" class="hidden">
+  <div class="drill-inner">
+    <button id="drill-close" class="ghost">close</button>
+    <h3 id="drill-title">why did the agent say this</h3>
+    <div id="drill-body"></div>
+  </div>
+</aside>
+
+<footer>
+  <p>claimtrace is an observability demo, not investment advice. The subject dataset is a skin; the audit layer is the product.</p>
+</footer>
+
+<script src="/static/viewer.js"></script>
+</body>
+</html>
