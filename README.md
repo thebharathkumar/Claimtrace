@@ -1,5 +1,12 @@
 # claimtrace
 
+<!-- brag:start -->
+<p align="center">
+  <a href="https://github.com/thebharathkumar/Claimtrace/blob/HEAD/docs/brag/claimtrace.mp4"><img src="https://raw.githubusercontent.com/thebharathkumar/Claimtrace/HEAD/docs/brag/claimtrace.gif" alt="Claimtrace: 15-second technical brief" width="100%"></a>
+</p>
+<p align="center"><sub>15-second technical brief. <a href="https://github.com/thebharathkumar/Claimtrace/blob/HEAD/docs/brag/claimtrace.mp4">Full MP4 with sound</a> &middot; more at <a href="https://thebharath.co">thebharath.co</a></sub></p>
+<!-- brag:end -->
+
 Trace every claim back to its source.
 
 Agents fail quietly. They state a number with full confidence, and nobody can say where the number came from, whether the sources even agree on it, or whether the record of what happened was edited after the fact. claimtrace is a demo of the trust stack that answers all three questions at once:
